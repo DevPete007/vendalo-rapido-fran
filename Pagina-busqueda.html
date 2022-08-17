@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 17 - https://www.wysiwygwebbuilder.com">
+<link href="VendeloRapido.css" rel="stylesheet">
+<link href="Pagina-busqueda.css" rel="stylesheet">
+<script src="jquery-3.6.0.min.js"></script>
+<script src="searchindex.js"></script>
+<script src="wb.sitesearch.min.js"></script>
+<script>
+var features = '';
+function searchPage(features)
+{
+   var element = document.getElementById('SiteSearch1');
+   window.open('sitesearch1-results.html?q='+encodeURIComponent(element.value), 'Inline_Frame', features);
+   return false;
+}
+</script>
+<script>
+$(document).ready(function()
+{
+   searchParseURL('SiteSearch1');
+});
+</script>
+</head>
+<body>
+<div id="PageHeader1" style="position:absolute;text-align:left;left:0px;top:0px;width:100%;height:102px;z-index:7777;">
+<label for="" id="titulo-log" style="position:absolute;left:233px;top:18px;width:346px;height:65px;line-height:65px;z-index:0;">Vendelo Rápido</label>
+<div id="wb_Image13" style="position:absolute;left:173px;top:18px;width:67px;height:67px;z-index:1;">
+<img src="images/Engranaje.png" id="Image13" alt="" width="67" height="67"></div>
+<form name="SiteSearch1_form" id="SiteSearch1_form" role="search" accept-charset="UTF-8" onsubmit="return searchPage(features)">
+<input type="text" id="SiteSearch1" style="position:absolute;left:631px;top:49px;width:217px;height:16px;z-index:2;" name="SiteSearch1" value="" spellcheck="false" placeholder="Ejem. Escabadora, motor.." role="searchbox"></form>
+<input type="button" id="Button2" onclick="searchPage();return false;" name="Que buscas" value="Que Buscas" style="position:absolute;left:858px;top:50px;width:96px;height:25px;z-index:3;">
+</div>
+<div id="wb_Text1" style="position:absolute;left:245px;top:155px;width:250px;height:18px;z-index:5;">
+<span style="color:#000000;font-family:Arial;font-size:19px;">Resultados de las busquedas</span></div>
+<iframe name="Inline_Frame" id="InlineFrame1" style="position:absolute;left:133px;top:249px;width:802px;height:806px;z-index:6;" src=""></iframe>
+</body>
+</html>

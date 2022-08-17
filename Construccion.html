@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 17 - https://www.wysiwygwebbuilder.com">
+<link href="VendeloRapido.css" rel="stylesheet">
+<link href="Construccion.css" rel="stylesheet">
+<script src="anime.min.js"></script>
+<script src="polymorph.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(event)
+{
+   var shapePath = document.querySelector('#MorphingIcon1-shape');
+   var paths = ["M0 0 L671 0 L671 208 L0 208Z "];
+   var interpolator = [];
+   interpolator[0] = polymorph.interpolate([paths[0], paths[0]]);
+   let progress = { prop: 0 };
+   var pathIndex = 0;
+   anime({
+      targets: progress,
+      prop: 1,
+      delay: 0,
+      duration: 2000,
+      easing: 'linear',
+      loop: true,
+      direction: 'normal',
+      update(anim) 
+      {
+         shapePath.setAttribute('d', interpolator[pathIndex](progress.prop));
+         if (anim.progress == 100)
+         {
+            pathIndex++;
+            if (pathIndex > 0)
+               pathIndex = 0;
+         }
+      }
+   });
+});
+</script>
+</head>
+<body onclick="window.location.href='./01excabadora.html';return false;">
+<div id="PageHeader1" style="position:absolute;text-align:left;left:0px;top:0px;width:100%;height:100px;z-index:7777;">
+<label for="" id="titulo-log" style="position:absolute;left:132px;top:17px;width:346px;height:65px;line-height:65px;z-index:0;">Vendelo Rápido</label>
+</div>
+<div id="wb_MorphingIcon1" style="position:absolute;left:150px;top:290px;width:671px;height:208px;z-index:2;">
+<svg id="MorphingIcon1" height="100%" width="100%" style="position:absolute;height:100%;width:100%;left:0;top:0;overflow:visible;" viewBox="0 0 671 208" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <path id="MorphingIcon1-shape" d="M0 0 L671 0 L671 208 L0 208Z " vector-effect="non-scaling-stroke" />
+</defs>
+<use xlink:href="#MorphingIcon1-shape" data-href="#MorphingIcon1-shape" style="fill:#FFFFFF;stroke:#0963AD;stroke-width:1"/>
+</svg>
+</div>
+
+<div id="wb_Text1" style="position:absolute;left:449px;top:190px;width:220px;height:28px;z-index:4;">
+<span style="color:#000000;font-family:Arial;font-size:29px;">Construcción</span></div>
+<a href="./01excabadora.html">
+<picture id="wb_Picture1" style="position:absolute;left:186px;top:303px;width:263px;height:172px;z-index:5">
+<img src="images/escavadora.jpg" id="Picture1" alt="" width="263" height="172">
+</picture>
+</a>
+<div id="wb_Text2" style="position:absolute;left:470px;top:303px;width:230px;height:24px;z-index:6;">
+<span style="color:#000000;font-family:Arial;font-size:27px;"><strong>Excavadora</strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:470px;top:361px;width:250px;height:13px;z-index:7;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">Modelo:&nbsp; <strong>SANY®</strong></span></div>
+<div id="wb_Text4" style="position:absolute;left:470px;top:383px;width:250px;height:13px;z-index:8;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">Año:&nbsp; <strong>2012</strong></span></div>
+<div id="wb_Text5" style="position:absolute;left:470px;top:416px;width:320px;height:30px;z-index:9;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">Precio:&nbsp; </span><span style="color:#000000;font-family:Arial;font-size:32px;"><strong>Lps. 250,000.00</strong></span></div>
+<div id="wb_Text6" style="position:absolute;left:480px;top:475px;width:250px;height:13px;z-index:10;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">Mas Informacion:</span></div>
+</body>
+</html>
